@@ -32,3 +32,31 @@ Please add `-u` flag to update in the future.
 ## License
 
 This project is under Apache v2 License. See the [LICENSE](LICENSE) file for the full license text.
+
+## Example
+
+package main
+
+import (
+	"fmt"
+	"github.com/vmsouza/go-ini"
+	"os"
+)
+
+func main() {
+  cfg, err := ini.Load("~/.my.cnf")
+  if err != nil {
+      fmt.Printf("Fail to read file: %v", err)
+      os.Exit(1)
+  }
+	sqlHost:=cfg.Section("client").Key("host").String()
+	sqlPort:=cfg.Section("client").Key("port").String()
+	sqlUser:=cfg.Section("client").Key("user").String()
+	sqlPassword:=cfg.Section("client").Key("password").String()
+	sqlDatabase:=cfg.Section("client").Key("database").String()
+  fmt.Printf("hostname: %s\n", sqlHost)
+	fmt.Printf("hostname: %s\n", sqlPort)
+	fmt.Printf("hostname: %s\n", sqlUser)
+	fmt.Printf("hostname: %s\n", sqlPassword)
+	fmt.Printf("hostname: %s\n", sqlDatabase)
+  
