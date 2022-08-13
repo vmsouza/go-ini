@@ -18,16 +18,10 @@ Package ini provides INI file read and write functionality in Go.
 The minimum requirement of Go is **1.13**.
 
 ```sh
-$ go get gopkg.in/ini.v1
+$ go get github.com/vmsouza/go-ini
 ```
 
 Please add `-u` flag to update in the future.
-
-## Getting Help
-
-- [Getting Started](https://ini.unknwon.io/docs/intro/getting_started)
-- [API Documentation](https://gowalker.org/gopkg.in/ini.v1)
-- 中国大陆镜像：https://ini.unknwon.cn
 
 ## License
 
